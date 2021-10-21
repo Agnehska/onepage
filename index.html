@@ -21,7 +21,7 @@
 			<h2 class="main">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
 			</h2>
-			<a href="#" class="btn">Заказать звонок</a>
+			<a href="#" class="btn popup-open">Заказать звонок</a>
 			<div class="row">
 				<div class="column">
 					<div class="item">
@@ -45,7 +45,7 @@
 								<a href="#" class="contact contact5">https://join.skype.com/<br>invite/DhLAUa3</a>
 							</li>
 						</ul>
-						<a href="#" class="btn item__btn">Заказать звонок</a>
+						<a href="#" class="btn item__btn popup-open">Заказать звонок</a>
 					</div>
 				</div>
 				<div class="column">
@@ -71,15 +71,15 @@
 						<h2 class="item__title">
 							Напишите нам
 						</h2>
-						<form action="#" class="form">
+						<form action="#" class="form" id="form-message">
 							<div class="block">
 								<div class="inputs">
-									<input type="text" class="form__input" placeholder="Имя">
-									<input type="text" class="form__input" placeholder="Телефон">
-									<input type="text" class="form__input" placeholder="E-mail">
+									<input type="text" class="form__input" name="name" placeholder="Имя">
+									<input type="text" class="form__input phone" name="phone" placeholder="Телефон">
+									<input type="text" class="form__input email" name="email" placeholder="E-mail">
 								</div>
 								
-								<textarea type="text" class="form__input form__input_textarea" placeholder="Сообщение"></textarea>
+								<textarea type="text" class="form__input form__input_textarea" name="text" placeholder="Сообщение"></textarea>
 							</div>
 							
 							<button class="btn item__btn">Отправить</button>
@@ -124,39 +124,43 @@
 			</div>
 		</div>
 	</div>
-<div class="popup">
-	<div class="popup-table table">
-		<div class="cell">
-			<div class="popup-content">
-				<div class="popup-close"></div>
-				<div class="popup__title"></div>
-				<div class="popup__txt"></div>
-				<form action="#" class="popup-form form">
-					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="" class="input" />
-					</div>
-					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req email" />
-					</div>
-					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req" />
-					</div>
-					<div class="form-button">
-						<button type="submit" class="form__btn btn fw"></button>
-					</div>
+	<div class="popup-fade">
+		<div class="popup">
+			<a class="popup-close" href="#"></a>
+			<div class="popup__block">
+				<h2 class="popup__title">
+					Оставьте ваш номер телефона и мы перезвоним!
+				</h2>
+				<form action="#" class="popup__form" id="form-message2">
+					<input type="text" name="name" class=" form__input" placeholder="Имя">
+					<input type="text" class="form__input phone" name="phone" placeholder="Телефон">
+					<button class="btn popup__btn">Отправить</button>
+					<p class="sub">
+						Нажимая кнопку «Отправить», Вы даете согласие на обработку персональных данных
+					</p>
 				</form>
+
 			</div>
-		</div>
+			
+		</div>		
 	</div>
-</div>
-<div class="popup popup-video">
-	<div class="popup-table table">
-		<div class="cell">
-			<div class="popup-close"></div>
-			<div class="popup-video__value"></div>
-		</div>
+	<div class="popup-fade2">
+		<div class="popup popup2">
+			<a class="popup-close2" href="#"></a>
+			<div class="popup__block popup__block_second">
+				<h2 class="popup__title">
+					Ваше сообщение успешно отправлено
+				</h2>
+
+
+			</div>
+			
+		</div>		
 	</div>
-</div><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+	
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
 <!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script> -->
 <script src="js/vendors.js"></script>
 <script src="js/main.js"></script>
