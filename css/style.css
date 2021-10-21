@@ -122,13 +122,13 @@ h1, h2, h3, h4, h5, h6 {
 .popup {
   -webkit-overflow-scrolling: touch;
   background-color: rgba(0, 0, 0, 0.8);
-  display: none;
+  /*display: none;*/
   position: fixed !important;
   top: 0px;
   left: 0;
   width: 100%;
-  height: 100%;
-  overflow: auto;
+  /*height: 100%;*/
+  /*overflow: auto;*/
   z-index: 100;
 }
 .popup.active .popup-content {
@@ -168,14 +168,16 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
 }
 
-.popup-close {
-  width: 15px;
-  height: 15px;
+.popup-close, .popup-close2 {
+  width: 30px;
+  height: 30px;
   position: absolute;
   top: 0px;
   right: 0px;
   cursor: pointer;
-  background: url("../img/icons/close.png") 0 0 no-repeat;
+  background: url("../img/icons/close.svg") 50% 50% no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .popup-video .popup-close {
@@ -256,6 +258,11 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 630px;
   margin: 0 0 40px 0;
 }
+@media (max-width: 720px) {
+  .main {
+    font-size: 17px;
+  }
+}
 
 .btn {
   font-weight: bold;
@@ -269,6 +276,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .row {
+  position: relative;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -361,6 +369,12 @@ h1, h2, h3, h4, h5, h6 {
   -o-transition: transform 0.5s ease;
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  top: 20%;
+}
+.item:hover .btn {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 @media (max-width: 992.98px) {
   .item:hover {
@@ -729,6 +743,107 @@ h1, h2, h3, h4, h5, h6 {
 
 .item__text_w:last-of-type {
   margin: 0;
+}
+
+.popup-fade, .popup-fade2 {
+  display: none;
+}
+
+.popup-fade:before, .popup-fade2:before {
+  content: "";
+  background: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: 9999;
+}
+
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 40%;
+  padding: 20px;
+  width: 585px;
+  height: unset;
+  margin-left: -200px;
+  z-index: 99999;
+  opacity: 1;
+  background: #FDFDFF;
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 29, 108, 0.1);
+          box-shadow: 0px 0px 30px rgba(0, 29, 108, 0.1);
+  border-radius: 20px;
+}
+@media (max-width: 767.98px) {
+  .popup {
+    width: 400px;
+    left: 50%;
+  }
+}
+@media (max-width: 420px) {
+  .popup {
+    width: 280px;
+    left: 65%;
+  }
+}
+@media (max-width: 370px) {
+  .popup {
+    left: 68%;
+  }
+}
+
+.popup-close, .popup-close2 {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+@media (max-width: 420px) {
+  .popup-close, .popup-close2 {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.popup__block {
+  padding: 80px 104px;
+}
+@media (max-width: 767.98px) {
+  .popup__block {
+    padding: 60px 40px;
+  }
+}
+@media (max-width: 420px) {
+  .popup__block {
+    padding: 30px 20px;
+  }
+}
+
+.popup__title {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #007DFB;
+  margin: 0 0 30px 0;
+}
+@media (max-width: 420px) {
+  .popup__title {
+    font-size: 17px;
+  }
+}
+
+.popup__form .form__input {
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+
+.popup__btn {
+  width: 100%;
+  margin: 0 0 15px 0 !important;
 }
 
 .form-row {
