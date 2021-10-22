@@ -372,6 +372,15 @@ h1, h2, h3, h4, h5, h6 {
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
     top: 20%;
   }
+  .item:hover .item {
+    width: 465px;
+    height: 634px;
+  }
+  .item:hover .item::nth-child(3) {
+    width: 465px;
+    height: 600px;
+    padding: 30px;
+  }
   .item:hover .form__input {
     font-size: 10px;
   }
