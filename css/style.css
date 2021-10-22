@@ -360,27 +360,36 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
-.item:hover {
-  -webkit-transform: scale(1.5);
-      -ms-transform: scale(1.5);
-          transform: scale(1.5);
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  -o-transition: transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-  top: 20%;
-}
-.item:hover .btn {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-}
-@media (max-width: 992.98px) {
+@media (min-width: 972px) {
   .item:hover {
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+            transform: scale(1.5);
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: -webkit-transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    top: 20%;
+  }
+  .item:hover .form__input {
+    font-size: 10px;
+  }
+  .item:hover .form__input_textarea {
+    height: 108px;
+  }
+  .item:hover .sub {
+    display: none;
+  }
+  .item:hover .sub2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .item:hover .btn {
+    width: 222px;
+    height: 50px;
+    padding: 15px;
   }
 }
 @media (max-width: 992.98px) {
@@ -548,6 +557,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .sub2 {
   display: none;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 15px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 992.98px) {
   .sub2 {
@@ -844,6 +858,12 @@ h1, h2, h3, h4, h5, h6 {
 .popup__btn {
   width: 100%;
   margin: 0 0 15px 0 !important;
+}
+
+.error {
+  height: 30px;
+  font-size: 13px;
+  color: red;
 }
 
 .form-row {
