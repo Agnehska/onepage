@@ -375,11 +375,15 @@ h1, h2, h3, h4, h5, h6 {
   .item:hover .item {
     width: 465px;
     height: 634px;
+    padding: 60px 40px 100px 40px;
   }
   .item:hover .item::nth-child(3) {
     width: 465px;
     height: 600px;
     padding: 30px;
+  }
+  .item:hover .column:first-of-type .item {
+    padding-bottom: 100px;
   }
   .item:hover .form__input {
     font-size: 10px;
@@ -403,12 +407,16 @@ h1, h2, h3, h4, h5, h6 {
     height: 50px;
     padding: 15px;
   }
+  .item:hover .btn .item__btn .popup-open {
+    margin-bottom: 60px !important;
+  }
   .item:hover .item__img {
     width: 200px;
-    height: 200px;
+    height: 250px;
   }
   .item:hover .contact {
-    margin: 0 0 30px 0;
+    font-size: 18px;
+    margin: 0 0 40px 0;
   }
   .item:hover .item__btn {
     margin: 0 0 25px 0;
@@ -603,6 +611,9 @@ h1, h2, h3, h4, h5, h6 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-weight: normal;
     width: 333px;
     font-size: 13px;
