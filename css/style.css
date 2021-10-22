@@ -411,7 +411,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 60px !important;
   }
   .item:hover .item__img {
-    width: 200px;
+    width: 250px;
     height: 250px;
   }
   .item:hover .contact {
