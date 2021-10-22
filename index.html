@@ -60,7 +60,7 @@
 						<div class="item__img">
 							<img src="img/qrcode35526454 1.png" alt="qrcode">
 						</div>
-						<a href="#" class="btn btn_w item__btn">VCart</a>
+						<a href="vCardDL.php" class="btn btn_w item__btn">VCart</a>
 						<p class="sub">
 							Добавьте в контакты
 						</p>
@@ -71,18 +71,18 @@
 						<h2 class="item__title">
 							Напишите нам
 						</h2>
-						<form action="#" class="form" id="form-message">
+						<form action="mail.php" class="form form-val" id="form-message">
 							<div class="block">
 								<div class="inputs">
-									<input type="text" class="form__input" name="name" placeholder="Имя">
-									<input type="text" class="form__input phone" name="phone" placeholder="Телефон">
-									<input type="text" class="form__input email" name="email" placeholder="E-mail">
+									<input type="text" class="form__input" name="name" id="name" placeholder="Имя" required>
+									<input type="text" class="form__input phone" name="phone" id="phone" placeholder="Телефон" required>
+									<input type="text" class="form__input email"  name="email" id="email" placeholder="E-mail" required>
 								</div>
 								
 								<textarea type="text" class="form__input form__input_textarea" name="text" placeholder="Сообщение"></textarea>
 							</div>
 							
-							<button class="btn item__btn">Отправить</button>
+							<button type="submit" class="btn item__btn">Отправить</button>
 						</form>
 						
 						<p class="sub">
@@ -131,10 +131,10 @@
 				<h2 class="popup__title">
 					Оставьте ваш номер телефона и мы перезвоним!
 				</h2>
-				<form action="#" class="popup__form" id="form-message2">
+				<form action="mail2.php" class="popup__form form-val" id="form-message2">
 					<input type="text" name="name" class=" form__input" placeholder="Имя">
 					<input type="text" class="form__input phone" name="phone" placeholder="Телефон">
-					<button class="btn popup__btn">Отправить</button>
+					<button class="btn popup__btn item__btn">Отправить</button>
 					<p class="sub">
 						Нажимая кнопку «Отправить», Вы даете согласие на обработку персональных данных
 					</p>
